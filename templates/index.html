@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Advisor</title>
+</head>
+<body>
+    <h1>Medicine Recommendation System</h1>
+    <form method="POST">
+        <label>Select your symptoms:</label><br>
+        {% for symptom in symptoms %}
+            <input type="checkbox" name="symptoms" value="{{ symptom }}">{{ symptom }}<br>
+        {% endfor %}
+        <button type="submit">Check</button>
+    </form>
+    
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    <h3>Medicines:</h3>
+    <ul>{% for med in medicines %}<li>{{ med }}</li>{% endfor %}</ul>
+    <h3>Precautions:</h3>
+    <ul>{% for p in precautions %}<li>{{ p }}</li>{% endfor %}</ul>
+    <h3>Emergency Signs:</h3>
+    <ul>{% for e in emergency_signs %}<li>{{ e }}</li>{% endfor %}</ul>
+    <h3>Lifestyle Tips:</h3>
+    <ul>{% for l in lifestyle_tips %}<li>{{ l }}</li>{% endfor %}</ul>
+    {% endif %}
+</body>
+</html>
