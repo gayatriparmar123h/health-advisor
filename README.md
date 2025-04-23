@@ -49,27 +49,6 @@ HTML + CSS (Frontend)
 
 Google Colab (Model Training)
 
-🔧 Setup Instructions
-Clone this repository:
-
-bash
-Copy
-Edit
-git clone https://github.com/your-username/health-advisor.git
-cd health-advisor
-Install dependencies:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the Flask app:
-
-bash
-Copy
-Edit
-python app.py
-Open your browser and go to http://127.0.0.1:5000
 
 🧠 Model Accuracy
 Achieved 99.80% accuracy using a Random Forest Classifier trained on a cleaned, symptom-encoded dataset.
